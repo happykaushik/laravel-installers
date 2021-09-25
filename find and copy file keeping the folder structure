@@ -1,5 +1,5 @@
 
 #$1 - Number of days
 find . -mtime -$1 -ls > modified.txt
-
+mkdir modified
 for f in `cat modified.txt`; do cp $f --parents modified/; done
